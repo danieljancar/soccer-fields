@@ -1,0 +1,22 @@
+{
+  "name": "soccer-fields",
+  "version": "1.0.0",
+  "description": "Fictional match results of European leagues transformed and displayed appropriately (season 2023/2024)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danieljancar/soccer-fields.git"
+  },
+  "keywords": [
+    "m426"
+  ],
+  "author": "Daniel Jancar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/danieljancar/soccer-fields/issues"
+  },
+  "homepage": "https://github.com/danieljancar/soccer-fields#readme"
+}
