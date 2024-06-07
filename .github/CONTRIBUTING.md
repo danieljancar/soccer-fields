@@ -15,13 +15,13 @@ Every commit message should be structured as follows:
 
 1. **Type**: This describes the nature of the change. Common types include:
 
-  - `feat` (new feature)
-  - `fix` (bug fix)
-  - `docs` (changes in documentation)
-  - `style` (formatting, missing semi colons, etc; no code change)
-  - `refactor` (refactoring production code)
-  - `test` (adding tests, refactoring tests; no production code change)
-  - `chore` (updating build tasks, package manager configs, etc; no production code change)
+-   `feat` (new feature)
+-   `fix` (bug fix)
+-   `docs` (changes in documentation)
+-   `style` (formatting, missing semi colons, etc; no code change)
+-   `refactor` (refactoring production code)
+-   `test` (adding tests, refactoring tests; no production code change)
+-   `chore` (updating build tasks, package manager configs, etc; no production code change)
 
 2. **Scope** (optional): This refers to the part of the codebase affected by the change.
 
@@ -45,10 +45,10 @@ BREAKING CHANGE: Users can no longer log in using their email address. Instead, 
 
 ### Commit Message Conventions
 
-- Use the present tense ("add feature" not "added feature")
-- Use the imperative mood ("move cursor to..." not "moves cursor to...")
-- Limit the first line to 72 characters or less
-- Reference issues and pull requests liberally after the first line
+-   Use the present tense ("add feature" not "added feature")
+-   Use the imperative mood ("move cursor to..." not "moves cursor to...")
+-   Limit the first line to 72 characters or less
+-   Reference issues and pull requests liberally after the first line
 
 ## Pull Requests
 
@@ -62,14 +62,14 @@ BREAKING CHANGE: Users can no longer log in using their email address. Instead, 
 
 ## Reporting Issues
 
-- **Check for Existing Issues**: Before creating a new issue, make sure it hasn't been reported already.
-- **Use Descriptive Titles**: Issue titles should be concise yet descriptive.
-- **Detail in Comments**: Include details about the issue, steps to reproduce, expected behavior, screenshots, etc.
+-   **Check for Existing Issues**: Before creating a new issue, make sure it hasn't been reported already.
+-   **Use Descriptive Titles**: Issue titles should be concise yet descriptive.
+-   **Detail in Comments**: Include details about the issue, steps to reproduce, expected behavior, screenshots, etc.
 
 ## Labels in Issues
 
-- **Categorize with Labels**: Use appropriate labels like `bug`, `feature`, `documentation`, `help wanted` to help
-  categorize and prioritize the issue.
+-   **Categorize with Labels**: Use appropriate labels like `bug`, `feature`, `documentation`, `help wanted` to help
+    categorize and prioritize the issue.
 
 Your contributions are vital to keeping Soccer Fields robust and reliable. By following these guidelines, we can ensure a
 smooth and efficient development process. Thank you for your contributions!

@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "npm run transform && ng serve",
     "build": "npm run transform && ng build",
+    "build:prod": "npm run transform && ng build --configuration production",
     "transform": "node transform-raw-results.js",
     "prettier": "prettier --write .",
     "watch": "ng build --watch --configuration development",

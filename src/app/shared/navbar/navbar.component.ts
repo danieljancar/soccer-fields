@@ -6,30 +6,29 @@ import { NgOptimizedImage } from '@angular/common'
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout'
 
 @Component({
-  selector: 'app-navbar',
-  standalone: true,
-  imports: [
-    MatIcon,
-    MatIconButton,
-    MatToolbarRow,
-    MatToolbar,
-    NgOptimizedImage,
-    MatButton,
-  ],
-  templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.scss'],
+    selector: 'app-navbar',
+    standalone: true,
+    imports: [
+        MatIcon,
+        MatIconButton,
+        MatToolbarRow,
+        MatToolbar,
+        NgOptimizedImage,
+        MatButton,
+    ],
+    templateUrl: './navbar.component.html',
+    styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent implements OnInit {
-  isSmallScreen = false
+    isSmallScreen = false
 
-  constructor(private breakpointObserver: BreakpointObserver) {
-  }
+    constructor(private breakpointObserver: BreakpointObserver) {}
 
-  ngOnInit() {
-    this.breakpointObserver.observe([
-      Breakpoints.Handset,
-    ]).subscribe(result => {
-      this.isSmallScreen = result.matches
-    })
-  }
+    ngOnInit() {
+        this.breakpointObserver
+            .observe([Breakpoints.Handset])
+            .subscribe((result) => {
+                this.isSmallScreen = result.matches
+            })
+    }
 }
