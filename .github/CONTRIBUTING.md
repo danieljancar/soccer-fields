@@ -15,22 +15,22 @@ Every commit message should be structured as follows:
 
 1. **Type**: This describes the nature of the change. Common types include:
 
-   - `feat` (new feature)
-   - `fix` (bug fix)
-   - `docs` (changes in documentation)
-   - `style` (formatting, missing semi colons, etc; no code change)
-   - `refactor` (refactoring production code)
-   - `test` (adding tests, refactoring tests; no production code change)
-   - `chore` (updating build tasks, package manager configs, etc; no production code change)
+  - `feat` (new feature)
+  - `fix` (bug fix)
+  - `docs` (changes in documentation)
+  - `style` (formatting, missing semi colons, etc; no code change)
+  - `refactor` (refactoring production code)
+  - `test` (adding tests, refactoring tests; no production code change)
+  - `chore` (updating build tasks, package manager configs, etc; no production code change)
 
 2. **Scope** (optional): This refers to the part of the codebase affected by the change.
-3.
-4. **Subject**: A brief description of the change, in the imperative mood.
 
-5. **Body** (optional): A more detailed explanation of the changes. This is where you should explain the reasoning
+3. **Subject**: A brief description of the change, in the imperative mood.
+
+4. **Body** (optional): A more detailed explanation of the changes. This is where you should explain the reasoning
    behind the changes if necessary.
 
-6. **Footer** (optional): This should contain any information about Breaking Changes and is also the place to reference
+5. **Footer** (optional): This should contain any information about Breaking Changes and is also the place to reference
    GitHub issues that this commit closes.
 
 Example:
