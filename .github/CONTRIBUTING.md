@@ -24,13 +24,13 @@ Every commit message should be structured as follows:
    - `chore` (updating build tasks, package manager configs, etc; no production code change)
 
 2. **Scope** (optional): This refers to the part of the codebase affected by the change.
-3. 
-3. **Subject**: A brief description of the change, in the imperative mood.
+3.
+4. **Subject**: A brief description of the change, in the imperative mood.
 
-4. **Body** (optional): A more detailed explanation of the changes. This is where you should explain the reasoning
+5. **Body** (optional): A more detailed explanation of the changes. This is where you should explain the reasoning
    behind the changes if necessary.
 
-5. **Footer** (optional): This should contain any information about Breaking Changes and is also the place to reference
+6. **Footer** (optional): This should contain any information about Breaking Changes and is also the place to reference
    GitHub issues that this commit closes.
 
 Example:
