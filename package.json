@@ -9,15 +9,18 @@
     "prettier": "prettier --write .",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "prepare": "husky"
   },
   "private": true,
   "dependencies": {
     "@angular/animations": "^18.0.0",
+    "@angular/cdk": "^18.0.2",
     "@angular/common": "^18.0.0",
     "@angular/compiler": "^18.0.0",
     "@angular/core": "^18.0.0",
     "@angular/forms": "^18.0.0",
+    "@angular/material": "^18.0.2",
     "@angular/platform-browser": "^18.0.0",
     "@angular/platform-browser-dynamic": "^18.0.0",
     "@angular/router": "^18.0.0",
@@ -33,6 +36,7 @@
     "@types/jasmine": "~5.1.0",
     "angular-eslint": "18.0.1",
     "eslint": "^9.3.0",
+    "husky": "^9.0.11",
     "jasmine-core": "~5.1.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",

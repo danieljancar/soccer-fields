@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.side-spacer {
+  padding: 0 0;
+
+  @media (min-width: 768px) {
+    padding: 0 3rem;
+  }
+
+  @media (min-width: 992px) {
+    padding: 0 5rem;
+  }
+
+  @media (min-width: 1200px) {
+    padding: 0 8rem;
+  }
+
+  @media (min-width: 1400px) {
+    padding: 0 15rem;
+  }
+
+}
