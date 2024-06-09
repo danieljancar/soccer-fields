@@ -17,8 +17,8 @@ const path = require('path')
  *  @output public/results.json
  */
 function transformRawResults() {
-    const rawResultsDir = path.join(__dirname, 'public/raw-results')
-    const outputDir = path.join(__dirname, 'public')
+    const rawResultsDir = path.join(__dirname, '../public/raw-results')
+    const outputDir = path.join(__dirname, '../public')
 
     if (!fs.existsSync(outputDir)) {
         fs.mkdirSync(outputDir, { recursive: true })

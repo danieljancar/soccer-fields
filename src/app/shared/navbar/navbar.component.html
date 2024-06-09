@@ -2,6 +2,7 @@
     <mat-toolbar-row>
         <div class="nav-brand">
             <img
+                priority
                 ngSrc="/brand/logo.png"
                 alt="SoccerFields"
                 height="50"
@@ -16,31 +17,31 @@
             @if (isSmallScreen) {
                 <button
                     mat-icon-button
-                    class="example-icon"
-                    aria-label="Example icon-button with menu icon"
+                    aria-label="icon-button with home icon"
+                    routerLink="/"
                 >
                     <mat-icon>home</mat-icon>
                 </button>
                 <button
+                    routerLink="/leaderboard"
                     mat-icon-button
-                    class="example-icon"
-                    aria-label="Example icon-button with menu icon"
+                    aria-label="icon-button with leaderboard icon"
                 >
                     <mat-icon>leaderboard</mat-icon>
                 </button>
             } @else {
                 <button
                     mat-button
-                    class="example-icon"
-                    aria-label="Example icon-button with menu icon"
+                    aria-label="icon-button with home icon"
+                    routerLink="/"
                 >
                     <mat-icon>home</mat-icon>
                     <span>Home</span>
                 </button>
                 <button
+                    routerLink="/leaderboard"
                     mat-button
-                    class="example-icon"
-                    aria-label="Example icon-button with menu icon"
+                    aria-label="icon-button with leaderboard icon"
                 >
                     <mat-icon>leaderboard</mat-icon>
                     <span>Leaderboard</span>

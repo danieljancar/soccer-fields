@@ -4,6 +4,7 @@ html,
 body {
     height: 100%;
 }
+
 body {
     margin: 0;
     font-family: Roboto, 'Helvetica Neue', sans-serif;
@@ -26,5 +27,15 @@ body {
 
     @media (min-width: 1400px) {
         padding: 0 15rem;
+    }
+}
+
+.link {
+    color: #70c184;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: underline;
     }
 }
