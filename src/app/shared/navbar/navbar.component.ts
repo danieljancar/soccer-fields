@@ -4,6 +4,7 @@ import { MatButton, MatIconButton } from '@angular/material/button'
 import { MatToolbar, MatToolbarRow } from '@angular/material/toolbar'
 import { NgOptimizedImage } from '@angular/common'
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout'
+import { RouterLink } from '@angular/router'
 
 @Component({
     selector: 'app-navbar',
@@ -15,6 +16,7 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout'
         MatToolbar,
         NgOptimizedImage,
         MatButton,
+        RouterLink,
     ],
     templateUrl: './navbar.component.html',
     styleUrls: ['./navbar.component.scss'],
