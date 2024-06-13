@@ -1,4 +1,4 @@
-import { Component } from '@angular/core'
+import { Component, OnInit } from '@angular/core'
 
 @Component({
     selector: 'app-leaderboard',
@@ -7,4 +7,14 @@ import { Component } from '@angular/core'
     templateUrl: './leaderboard.component.html',
     styleUrl: './leaderboard.component.scss',
 })
-export class LeaderboardComponent {}
+export class LeaderboardComponent implements OnInit
+{
+    ngOnInit(): void {
+        throw new Error('Method not implemented.');
+    }
+
+    changeLastDay(newLastDay: Date){
+        throw new Error('Method not implemented.');
+        return newLastDay
+    }
+}
