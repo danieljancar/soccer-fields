@@ -9,12 +9,20 @@ import { Component, OnInit } from '@angular/core'
 })
 export class LeaderboardComponent implements OnInit
 {
+    public lastDay: number = 0;
+    public rawDataList: any = [];
+    public ligaDataList: any = [];
+
     ngOnInit(): void {
-        throw new Error('Method not implemented.');
+        // Daten aus results.json ins radDataList laden und mit convertData() konvertieren
     }
 
-    changeLastDay(newLastDay: Date){
-        throw new Error('Method not implemented.');
-        return newLastDay
+    convertData(){
+        // Daten von rawDataList nehmen, für die Tabelle konvertieren und in ligaDataList abspeichern
+        throw new Error("Not implemented yet")
+    }
+
+    changeLastDay(newLastDay: number){
+        this.lastDay = newLastDay;
     }
 }
