@@ -1,28 +1,54 @@
 <div class="mat-elevation-z8">
     <table mat-table class="full-width-table" matSort aria-label="Elements">
-        <!-- Id Column -->
-        <ng-container matColumnDef="id">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header>Id</th>
-            <td mat-cell *matCellDef="let row">{{ row.id }}</td>
+        <ng-container matColumnDef="rank">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Rank</th>
+            <td mat-cell *matCellDef="let row">{{ row.rank }}</td>
         </ng-container>
 
-        <!-- Name Column -->
         <ng-container matColumnDef="name">
             <th mat-header-cell *matHeaderCellDef mat-sort-header>Name</th>
             <td mat-cell *matCellDef="let row">{{ row.name }}</td>
         </ng-container>
 
+        <ng-container matColumnDef="points">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Points</th>
+            <td mat-cell *matCellDef="let row">{{ row.points }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="matchesPlayed">
+            <th mat-header-cell *matHeaderCellDef>Matches Played</th>
+            <td mat-cell *matCellDef="let row">{{ row.scoreCount }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="gameResults">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>
+                Wins/Losses/Draws
+            </th>
+            <td mat-cell *matCellDef="let row">
+                {{ row.wins }}/{{ row.losses }}/{{ row.draws }}
+            </td>
+        </ng-container>
+
+        <ng-container matColumnDef="goalStats">
+            <th mat-header-cell *matHeaderCellDef>Scored/Received Goals</th>
+            <td mat-cell *matCellDef="let row">
+                {{ row.scoredGoals }}/{{ row.scoredGoals }}
+            </td>
+        </ng-container>
+
+        <ng-container matColumnDef="goalDiff">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>
+                Difference
+            </th>
+            <td mat-cell *matCellDef="let row">
+                @if (row.diff > 0) {
+                    +
+                }
+                {{ row.diff }}
+            </td>
+        </ng-container>
+
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
     </table>
-
-    <mat-paginator
-        #paginator
-        [length]="dataSource.data.length"
-        [pageIndex]="0"
-        [pageSize]="10"
-        [pageSizeOptions]="[5, 10, 20]"
-        aria-label="Select page"
-    >
-    </mat-paginator>
 </div>
