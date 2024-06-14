@@ -17,8 +17,8 @@
                 "build": {
                     "builder": "@angular-devkit/build-angular:application",
                     "options": {
-                      "baseHref": "/soccer-fields/",
-                      "outputPath": "dist/soccer-fields",
+                        "baseHref": "/soccer-fields/",
+                        "outputPath": "dist/soccer-fields",
                         "index": "src/index.html",
                         "browser": "src/main.ts",
                         "polyfills": ["zone.js"],
