@@ -86,13 +86,20 @@
                                 "glob": "**/*",
                                 "input": "public",
                                 "output": "/"
-                            }
+                            },
+                            "README.md"
                         ],
                         "styles": [
                             "@angular/material/prebuilt-themes/azure-blue.css",
-                            "src/styles.scss"
+                            "src/styles.scss",
+                            "node_modules/prismjs/themes/prism-okaidia.css",
+                            "node_modules/prismjs/plugins/line-numbers/prism-line-numbers.css"
                         ],
-                        "scripts": []
+                        "scripts": [
+                            "node_modules/prismjs/prism.js",
+                            "node_modules/prismjs/components/prism-typescript.min.js",
+                            "node_modules/prismjs/plugins/line-numbers/prism-line-numbers.js"
+                        ]
                     }
                 },
                 "lint": {
