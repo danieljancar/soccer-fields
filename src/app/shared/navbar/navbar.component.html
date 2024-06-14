@@ -1,52 +1,52 @@
 <mat-toolbar color="primary" class="side-spacer">
-    <mat-toolbar-row>
-        <div class="nav-brand">
-            <img
-                priority
-                ngSrc="/brand/logo.png"
-                alt="SoccerFields"
-                height="50"
-                width="50"
-            />
-            <span>SoccerFields</span>
-        </div>
+  <mat-toolbar-row>
+    <div class="nav-brand">
+      <img
+        priority
+        ngSrc="./brand/logo.png"
+        alt="SoccerFields"
+        height="50"
+        width="50"
+      />
+      <span>SoccerFields</span>
+    </div>
 
-        <span class="nav-spacer"></span>
+    <span class="nav-spacer"></span>
 
-        <div class="nav-items">
-            @if (isSmallScreen) {
-                <button
-                    mat-icon-button
-                    aria-label="icon-button with home icon"
-                    routerLink="/"
-                >
-                    <mat-icon>home</mat-icon>
-                </button>
-                <button
-                    routerLink="/leaderboard"
-                    mat-icon-button
-                    aria-label="icon-button with leaderboard icon"
-                >
-                    <mat-icon>leaderboard</mat-icon>
-                </button>
-            } @else {
-                <button
-                    mat-button
-                    aria-label="icon-button with home icon"
-                    routerLink="/"
-                >
-                    <mat-icon>home</mat-icon>
-                    <span>Home</span>
-                </button>
-                <button
-                    routerLink="/leaderboard"
-                    mat-button
-                    aria-label="icon-button with leaderboard icon"
-                >
-                    <mat-icon>leaderboard</mat-icon>
-                    <span>Leaderboard</span>
-                </button>
-            }
-        </div>
-    </mat-toolbar-row>
+    <div class="nav-items">
+      @if (isSmallScreen) {
+        <button
+          mat-icon-button
+          aria-label="icon-button with home icon"
+          routerLink="/"
+        >
+          <mat-icon>home</mat-icon>
+        </button>
+        <button
+          routerLink="/leaderboard"
+          mat-icon-button
+          aria-label="icon-button with leaderboard icon"
+        >
+          <mat-icon>leaderboard</mat-icon>
+        </button>
+      } @else {
+        <button
+          mat-button
+          aria-label="icon-button with home icon"
+          routerLink="/"
+        >
+          <mat-icon>home</mat-icon>
+          <span>Home</span>
+        </button>
+        <button
+          routerLink="/leaderboard"
+          mat-button
+          aria-label="icon-button with leaderboard icon"
+        >
+          <mat-icon>leaderboard</mat-icon>
+          <span>Leaderboard</span>
+        </button>
+      }
+    </div>
+  </mat-toolbar-row>
 </mat-toolbar>
