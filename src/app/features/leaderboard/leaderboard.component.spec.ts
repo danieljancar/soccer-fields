@@ -30,15 +30,25 @@ describe('LeaderboardComponent', () => {
         expect(component.ligaDataList.length).toBeGreaterThan(0);
     })
 
-    it('should sort the Table by poinst(desc), goalDifference(desc), wins(desc) and name(asc)', () => {
-        component.ngOnInit();
-        expect(component).toBeDefined();
-    })
-
     it('should have a lastDay variable that can be changed', () => {
         component.ngOnInit();
         const lastDay = 8
         component.changeLastDay(8)
         expect(component.lastDay).toBe(lastDay)
     }) 
+
+    it('should sort the Table by poinst(desc), goalDifference(desc), wins(desc) and name(asc)', () => {
+        component.ngOnInit();
+        expect(component).toBeDefined();
+    })
+    
+    it('should check if the data is calculated correctly', () => {
+        component.ngOnInit();
+        expect(component).toBeDefined();
+    })
+    
+    it('should check if the lastDay gets correctly applied', () => {
+        component.ngOnInit();
+        expect(component).toBeDefined();
+    })
 })

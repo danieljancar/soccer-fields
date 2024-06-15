@@ -38,7 +38,7 @@
 	- [ ] Last day filtering
 	- [ ] Column calculations
 	- [ ] Table sorting
-- [ ] Additional testdata is provided for manually testing the sorting
+- [x] Additional testdata is provided for manually testing the sorting
 - [ ] The code is formatted under clean-code-aspects:
 	- [ ] Formatting
 	- [ ] Naming
