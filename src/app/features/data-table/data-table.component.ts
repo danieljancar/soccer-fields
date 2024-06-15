@@ -1,7 +1,8 @@
-import { AfterViewInit, Component, ViewChild } from '@angular/core'
+import { AfterViewInit, Component, inject, ViewChild } from '@angular/core'
 import { MatTableModule, MatTable } from '@angular/material/table'
 import { MatSortModule, MatSort } from '@angular/material/sort'
 import { DataTableDataSource, DataTableItem } from './data-table-datasource'
+import { ResultsService } from '../../core/results.service'
 
 @Component({
     selector: 'app-data-table',
@@ -13,7 +14,8 @@ import { DataTableDataSource, DataTableItem } from './data-table-datasource'
 export class DataTableComponent implements AfterViewInit {
     @ViewChild(MatSort) sort!: MatSort
     @ViewChild(MatTable) table!: MatTable<DataTableItem>
-    dataSource = new DataTableDataSource()
+    resultsService = inject(ResultsService)
+    dataSource = new DataTableDataSource(this.resultsService)
 
     /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
     displayedColumns = [

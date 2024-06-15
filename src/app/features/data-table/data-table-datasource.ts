@@ -2,6 +2,7 @@ import { DataSource } from '@angular/cdk/collections'
 import { MatSort } from '@angular/material/sort'
 import { map } from 'rxjs/operators'
 import { Observable, of as observableOf, merge } from 'rxjs'
+import { ResultsService } from '../../core/results.service'
 
 export interface DataTableItem {
     name: string
@@ -16,44 +17,30 @@ export interface DataTableItem {
     diff: number
 }
 
-const EXAMPLE_DATA: DataTableItem[] = [
-    {
-        rank: 1,
-        name: 'men',
-        points: 30,
-        scoreCount: 20,
-        wins: 10,
-        losses: 5,
-        draws: 2,
-        scoredGoals: 60,
-        receivedGoals: 20,
-        diff: 20,
-    },
-    {
-        rank: 2,
-        name: 'fc farese',
-        points: 40,
-        scoreCount: 30,
-        wins: 13,
-        losses: 5,
-        draws: 5,
-        scoredGoals: 65,
-        receivedGoals: 30,
-        diff: 21,
-    },
-]
-
 /**
  * Data source for the DataTable view. This class should
  * encapsulate all logic for fetching and manipulating the displayed data
  * (including sorting, pagination, and filtering).
  */
 export class DataTableDataSource extends DataSource<DataTableItem> {
-    data: DataTableItem[] = EXAMPLE_DATA
+    data!: DataTableItem[]
     sort: MatSort | undefined
+    selectedLeague = 'bundesliga'
 
-    constructor() {
+    constructor(private resultsService: ResultsService) {
         super()
+        this.loadLeaderboard(this.selectedLeague)
+    }
+
+    loadLeaderboard(league: string): void {
+        this.resultsService.getLeaderboard(league).subscribe((data) => {
+            this.data = data
+        })
+    }
+
+    onLeagueChange(league: string): void {
+        this.selectedLeague = league
+        this.loadLeaderboard(league)
     }
 
     /**
@@ -82,7 +69,7 @@ export class DataTableDataSource extends DataSource<DataTableItem> {
      * any open connections or free any held resources that were set up during connect.
      */
     disconnect(): void {
-      // 
+        //
     }
 
     /**

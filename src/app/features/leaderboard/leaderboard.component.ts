@@ -1,5 +1,6 @@
-import { Component } from '@angular/core'
+import { Component, inject } from '@angular/core'
 import { DataTableComponent } from '../data-table/data-table.component'
+import { ResultsService } from '../../core/results.service'
 
 @Component({
     selector: 'app-leaderboard',
@@ -8,4 +9,6 @@ import { DataTableComponent } from '../data-table/data-table.component'
     templateUrl: './leaderboard.component.html',
     styleUrl: './leaderboard.component.scss',
 })
-export class LeaderboardComponent {}
+export class LeaderboardComponent {
+  protected resultsService = inject(ResultsService)
+}
