@@ -1,27 +1,47 @@
-# SoccerFields
+Here’s a more neutral version of the README text:
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.1.
+# Soccer Fields
 
-## Development server
+This program contains fictional match results of European leagues for the 2023/2024 season. It calculates and displays results in a tabular format for each league.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Features
 
-## Code scaffolding
+- **League Selection**: Choose a league and the time span of games.
+- **Detailed Tables**: Displays data such as team name, rank, points, victories, and more.
+- **Sorting**: The table is statically sorted by Points(desc), Goal Difference(desc), Victories(desc), and Team Names(asc).
+- **All-Leagues View**: View data for all leagues if no specific league is selected.
+- **Data Download**: Download or copy tables for later use.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+This program is based on the M426 module "Git and Scrum" at BBZW Sursee.
 
-## Build
+## Installation Guide
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Clone the repository into a local Folder
+```
+git clone https://github.com/danieljancar/soccer-fields
+```
 
-## Running unit tests
+Afterwards, open the Folder in a IDE (for example Visual Studio Code) and install the following packages
+```
+npm install
+npm install -g npx
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Starting Guide
 
-## Running end-to-end tests
+To start the application, execute the following command from a terminal or your IDE
+```
+npm run transform && ng serve
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Afterwards you can find the application under the following url
+- localhost:4200
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Testing Guide
+
+Execute the following command to run all Tests
+```
+npm run ng test
+```
+
