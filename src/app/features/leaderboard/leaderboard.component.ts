@@ -10,5 +10,5 @@ import { ResultsService } from '../../core/results.service'
     styleUrl: './leaderboard.component.scss',
 })
 export class LeaderboardComponent {
-  protected resultsService = inject(ResultsService)
+    protected resultsService = inject(ResultsService)
 }
