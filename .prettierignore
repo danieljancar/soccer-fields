@@ -2,3 +2,4 @@ node_modules
 .angular
 .idea
 .public/raw-results
+.nx

@@ -44,7 +44,23 @@ function transformRawResults() {
                     .substring(resultIndex, resultIndex + 3)
                     .trim()
                 const awayTeam = line.substring(resultIndex + 3).trim()
-                return { homeTeam, result, awayTeam }
+
+                // Splitting result into home and away team scores
+                const [homeTeamScore, awayTeamScore] = result
+                    .split(':')
+                    .map(Number)
+
+                // Constructing the match object in the desired format
+                return {
+                    home: {
+                        name: homeTeam,
+                        score: homeTeamScore,
+                    },
+                    away: {
+                        name: awayTeam,
+                        score: awayTeamScore,
+                    },
+                }
             })
 
             if (!allMatches[league]) {

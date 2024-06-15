@@ -7,7 +7,7 @@
         "build": "npm run transform && ng build",
         "build:prod": "npm run transform && ng build --configuration production",
         "transform": "node builder/transform-raw-results.js",
-        "prettier": "prettier --write .",
+        "prettier": "npx prettier --write .",
         "watch": "ng build --watch --configuration development",
         "test": "ng test",
         "lint": "ng lint",
@@ -25,6 +25,9 @@
         "@angular/platform-browser": "^18.0.0",
         "@angular/platform-browser-dynamic": "^18.0.0",
         "@angular/router": "^18.0.0",
+        "marked": "^12.0.2",
+        "ngx-markdown": "^18.0.0",
+        "prismjs": "^1.29.0",
         "rxjs": "~7.8.0",
         "tslib": "^2.3.0",
         "zone.js": "~0.14.3"
