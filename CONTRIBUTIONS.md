@@ -1,7 +1,7 @@
 ## Teammitglieder Beitrag
 
 | Name   | Punktzahl |
-|--------|-----------|
+| ------ | --------- |
 | Eric   | 14        |
 | Daniel | 16        |
 | Jana   | 5         |
