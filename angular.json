@@ -84,7 +84,8 @@
                         "assets": [
                             {
                                 "glob": "**/*",
-                                "input": "public"
+                                "input": "public",
+                                "output": "/"
                             }
                         ],
                         "styles": [
@@ -92,6 +93,15 @@
                             "src/styles.scss"
                         ],
                         "scripts": []
+                            "src/styles.scss",
+                            "node_modules/prismjs/themes/prism-okaidia.css",
+                            "node_modules/prismjs/plugins/line-numbers/prism-line-numbers.css"
+                        ],
+                        "scripts": [
+                            "node_modules/prismjs/prism.js",
+                            "node_modules/prismjs/components/prism-typescript.min.js",
+                            "node_modules/prismjs/plugins/line-numbers/prism-line-numbers.js"
+                        ]
                     }
                 },
                 "lint": {

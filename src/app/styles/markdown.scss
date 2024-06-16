@@ -1,0 +1,90 @@
+.markdown__container {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+
+    h1 {
+        font-size: 1.75em;
+        margin-bottom: 0.5em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+        margin-bottom: 0.5em;
+    }
+
+    h3 {
+        font-size: 1.25em;
+        margin-bottom: 0.5em;
+    }
+
+    h4 {
+        font-size: 1.1em;
+        margin-bottom: 0.5em;
+    }
+
+    h5 {
+        font-size: 1em;
+        margin-bottom: 0.5em;
+    }
+
+    h6 {
+        font-size: 0.9em;
+        margin-bottom: 0.5em;
+    }
+
+    p {
+        font-size: 0.95em;
+        margin-bottom: 1em;
+    }
+
+    ul,
+    ol {
+        font-size: 0.95em;
+        margin-bottom: 1em;
+        padding-left: 2em;
+    }
+
+    a {
+        color: #70c184;
+        text-decoration: none;
+        cursor: pointer;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    pre,
+    code {
+        font-size: 0.85em;
+        background-color: #f5f5f5;
+        padding: 0.5em;
+        border-radius: 4px;
+    }
+
+    blockquote {
+        font-size: 0.95em;
+        border-left: 4px solid #ccc;
+        padding-left: 1em;
+        color: #666;
+        margin-bottom: 1em;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 1em;
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 0.5em;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f5f5f5;
+        }
+    }
+}
