@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http'
     providedIn: 'root',
 })
 export class ResultsService {
-    private jsonUrl = '../../../results.json'
+    private jsonUrl = './results.json'
     private leaderboardSubject = new BehaviorSubject<DataTableItem[]>([])
     leaderboard$ = this.leaderboardSubject.asObservable()
 
