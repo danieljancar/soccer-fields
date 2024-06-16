@@ -23,29 +23,26 @@ export class ResultsService {
         return this.getResults().pipe(map((results) => Object.keys(results)))
     }
 
-    setFilter(league: string, maxDay: number): void {
+    setFilter(league: string | null, maxDay: number): void {
         this.getResults()
             .pipe(
                 map((results) => {
                     const leaderboard: Record<string, DataTableItem> = {}
-                    const leagueData = results[league as keyof Results]
 
-                    for (const day in leagueData) {
-                        if (parseInt(day.replace('day', ''), 10) > maxDay)
-                            continue
-
-                        leagueData[day].forEach((match) => {
-                            this.updateTeamStats(
-                                leaderboard,
-                                match.home,
-                                match.away
+                    if (league) {
+                        this.processLeague(
+                            results[league as keyof Results],
+                            maxDay,
+                            leaderboard
+                        )
+                    } else {
+                        for (const league in results) {
+                            this.processLeague(
+                                results[league as keyof Results],
+                                maxDay,
+                                leaderboard
                             )
-                            this.updateTeamStats(
-                                leaderboard,
-                                match.away,
-                                match.home
-                            )
-                        })
+                        }
                     }
 
                     const sortedLeaderboard = Object.values(leaderboard).sort(
@@ -64,6 +61,23 @@ export class ResultsService {
                 })
             )
             .subscribe()
+    }
+
+    private processLeague(
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        leagueData: any,
+        maxDay: number,
+        leaderboard: Record<string, DataTableItem>
+    ) {
+        for (const day in leagueData) {
+            if (parseInt(day.replace('day', ''), 10) > maxDay) continue
+
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            leagueData[day].forEach((match: any) => {
+                this.updateTeamStats(leaderboard, match.home, match.away)
+                this.updateTeamStats(leaderboard, match.away, match.home)
+            })
+        }
     }
 
     private updateTeamStats(
@@ -101,5 +115,9 @@ export class ResultsService {
             teamStats.draws += 1
             teamStats.points += 1
         }
+    }
+
+    getLeaderboardData(): Observable<DataTableItem[]> {
+        return this.leaderboard$
     }
 }

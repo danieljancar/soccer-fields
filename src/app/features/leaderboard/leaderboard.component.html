@@ -6,9 +6,9 @@
                     <mat-label>League</mat-label>
                     <mat-select formControlName="league">
                         @for (league of leagues; track $index) {
-                            <mat-option [value]="league">{{
-                                league
-                            }}</mat-option>
+                            <mat-option [value]="league"
+                                >{{ league }}
+                            </mat-option>
                         }
                     </mat-select>
                 </mat-form-field>
@@ -29,6 +29,15 @@
             </button>
         </div>
     </form>
+
+    <div class="actions">
+        <button mat-raised-button color="primary" (click)="downloadCSV()">
+            Download CSV
+        </button>
+        <button mat-raised-button color="accent" (click)="copyToClipboard()">
+            Copy to Clipboard
+        </button>
+    </div>
 
     <app-data-table />
 </div>
