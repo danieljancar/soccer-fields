@@ -1,25 +1,34 @@
 <div class="side-spacer bottom-margin">
-  <form [formGroup]="form" (ngSubmit)="onSubmit()">
-    <div class="filter__container">
-      <div class="filter__inputs">
-        <mat-form-field appearance="fill">
-          <mat-label>League</mat-label>
-          <mat-select formControlName="league">
-            @for (league of leagues; track $index) {
-              <mat-option [value]="league">{{ league }}</mat-option>
-            }
-          </mat-select>
-        </mat-form-field>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div class="filter__container">
+            <div class="filter__inputs">
+                <mat-form-field appearance="fill">
+                    <mat-label>League</mat-label>
+                    <mat-select formControlName="league">
+                        @for (league of leagues; track $index) {
+                            <mat-option [value]="league">{{
+                                league
+                            }}</mat-option>
+                        }
+                    </mat-select>
+                </mat-form-field>
 
-        <mat-form-field appearance="fill">
-          <mat-label>Up to Day</mat-label>
-          <input matInput type="number" formControlName="day" min="1" />
-        </mat-form-field>
-      </div>
+                <mat-form-field appearance="fill">
+                    <mat-label>Up to Day</mat-label>
+                    <input
+                        matInput
+                        type="number"
+                        formControlName="day"
+                        min="1"
+                    />
+                </mat-form-field>
+            </div>
 
-      <button mat-raised-button color="primary" type="submit">Filter</button>
-    </div>
-  </form>
+            <button mat-raised-button color="primary" type="submit">
+                Filter
+            </button>
+        </div>
+    </form>
 
-  <app-data-table />
+    <app-data-table />
 </div>
