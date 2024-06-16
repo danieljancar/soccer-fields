@@ -17,62 +17,62 @@ const path = require('path')
  *  @output public/results.json
  */
 function transformRawResults() {
-  const rawResultsDir = path.join(__dirname, '../public/raw-results')
-  const outputDir = path.join(__dirname, '../public')
+    const rawResultsDir = path.join(__dirname, '../public/raw-results')
+    const outputDir = path.join(__dirname, '../public')
 
-  if (!fs.existsSync(outputDir)) {
-    fs.mkdirSync(outputDir, { recursive: true })
-  }
+    if (!fs.existsSync(outputDir)) {
+        fs.mkdirSync(outputDir, { recursive: true })
+    }
 
-  const leagues = fs.readdirSync(rawResultsDir)
+    const leagues = fs.readdirSync(rawResultsDir)
 
-  const allMatches = {}
+    const allMatches = {}
 
-  leagues.forEach((league) => {
-    const leagueDir = path.join(rawResultsDir, league)
-    const days = fs.readdirSync(leagueDir)
+    leagues.forEach((league) => {
+        const leagueDir = path.join(rawResultsDir, league)
+        const days = fs.readdirSync(leagueDir)
 
-    days.forEach((day) => {
-      const dayKey = day.replace('.txt', '')
-      const dayFilePath = path.join(leagueDir, day)
-      const fileContent = fs.readFileSync(dayFilePath, 'utf-8').trim()
+        days.forEach((day) => {
+            const dayKey = day.replace('.txt', '')
+            const dayFilePath = path.join(leagueDir, day)
+            const fileContent = fs.readFileSync(dayFilePath, 'utf-8').trim()
 
-      const matches = fileContent.split('\n').map((line) => {
-        const resultIndex = line.search(/[0-9]:[0-9]/)
-        const homeTeam = line.substring(0, resultIndex).trim()
-        const result = line
-          .substring(resultIndex, resultIndex + 3)
-          .trim()
-        const awayTeam = line.substring(resultIndex + 3).trim()
+            const matches = fileContent.split('\n').map((line) => {
+                const resultIndex = line.search(/[0-9]:[0-9]/)
+                const homeTeam = line.substring(0, resultIndex).trim()
+                const result = line
+                    .substring(resultIndex, resultIndex + 3)
+                    .trim()
+                const awayTeam = line.substring(resultIndex + 3).trim()
 
-        const [homeTeamScore, awayTeamScore] = result
-          .split(':')
-          .map(Number)
+                const [homeTeamScore, awayTeamScore] = result
+                    .split(':')
+                    .map(Number)
 
-        return {
-          home: {
-            name: homeTeam,
-            score: homeTeamScore,
-          },
-          away: {
-            name: awayTeam,
-            score: awayTeamScore,
-          },
-        }
-      })
+                return {
+                    home: {
+                        name: homeTeam,
+                        score: homeTeamScore,
+                    },
+                    away: {
+                        name: awayTeam,
+                        score: awayTeamScore,
+                    },
+                }
+            })
 
-      if (!allMatches[league]) {
-        allMatches[league] = {}
-      }
+            if (!allMatches[league]) {
+                allMatches[league] = {}
+            }
 
-      allMatches[league][dayKey] = matches
+            allMatches[league][dayKey] = matches
+        })
     })
-  })
 
-  const outputFile = path.join(outputDir, 'results.json')
-  fs.writeFileSync(outputFile, JSON.stringify(allMatches, null, 2))
+    const outputFile = path.join(outputDir, 'results.json')
+    fs.writeFileSync(outputFile, JSON.stringify(allMatches, null, 2))
 
-  console.log('🎉 All match results transformed and saved to results.json.\n')
+    console.log('🎉 All match results transformed and saved to results.json.\n')
 }
 
 transformRawResults()
