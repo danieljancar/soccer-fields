@@ -17,7 +17,6 @@ export class DataTableComponent implements AfterViewInit {
     resultsService = inject(ResultsService)
     dataSource = new DataTableDataSource(this.resultsService)
 
-    /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
     displayedColumns = [
         'rank',
         'name',
