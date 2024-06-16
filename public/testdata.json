@@ -1,0 +1,100 @@
+{
+    "bundesliga": {
+        "day01": [
+            {
+                "home": {
+                    "name": "Luzern",
+                    "score": 2
+                },
+                "away": {
+                    "name": "Basel",
+                    "score": 2
+                }
+            },
+            {
+                "home": {
+                    "name": "Bern",
+                    "score": 2
+                },
+                "away": {
+                    "name": "Locarno",
+                    "score": 2
+                }
+            },
+            {
+                "home": {
+                    "name": "Solothurn",
+                    "score": 1
+                },
+                "away": {
+                    "name": "Thun",
+                    "score": 1
+                }
+            }
+        ],
+        "day02": [
+            {
+                "home": {
+                    "name": "Luzern",
+                    "score": 2
+                },
+                "away": {
+                    "name": "Locarno",
+                    "score": 1
+                }
+            },
+            {
+                "home": {
+                    "name": "Basel",
+                    "score": 1
+                },
+                "away": {
+                    "name": "Solothurn",
+                    "score": 1
+                }
+            },
+            {
+                "home": {
+                    "name": "Bern",
+                    "score": 1
+                },
+                "away": {
+                    "name": "Thun",
+                    "score": 2
+                }
+            }
+        ],
+        "day03": [
+            {
+                "home": {
+                    "name": "Luzern",
+                    "score": 1
+                },
+                "away": {
+                    "name": "Bern",
+                    "score": 2
+                }
+            },
+            {
+                "home": {
+                    "name": "Solothurn",
+                    "score": 1
+                },
+                "away": {
+                    "name": "Locarno",
+                    "score": 1
+                }
+            },
+            {
+                "home": {
+                    "name": "Basel",
+                    "score": 1
+                },
+                "away": {
+                    "name": "Thun",
+                    "score": 1
+                }
+            }
+        ]
+    }
+}
