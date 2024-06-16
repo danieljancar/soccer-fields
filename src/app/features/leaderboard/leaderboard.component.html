@@ -1,1 +1,13 @@
-<app-data-table />
+<div class="side-spacer bottom-margin">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <label for="league">League:</label>
+        <input id="league" formControlName="league" />
+
+        <label for="day">Up to Day:</label>
+        <input id="day" type="number" formControlName="day" min="1" />
+
+        <button type="submit">Filter</button>
+    </form>
+
+    <app-data-table />
+</div>
