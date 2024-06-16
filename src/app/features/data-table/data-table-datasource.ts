@@ -1,7 +1,7 @@
 import { DataSource } from '@angular/cdk/collections'
 import { MatSort } from '@angular/material/sort'
 import { map } from 'rxjs/operators'
-import { Observable,  merge, BehaviorSubject } from 'rxjs'
+import { Observable, merge, BehaviorSubject } from 'rxjs'
 import { ResultsService } from '../../core/results.service'
 
 export interface DataTableItem {
